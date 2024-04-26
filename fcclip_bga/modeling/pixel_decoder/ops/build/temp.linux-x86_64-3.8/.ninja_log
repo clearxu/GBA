@@ -1,0 +1,4 @@
+# ninja log v5
+1	4616	1711008194872177789	/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-3.8/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/src/cpu/ms_deform_attn_cpu.o	7e77f85fb1c6ab96
+1	12482	1711008202716324296	/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-3.8/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/src/cuda/ms_deform_attn_cuda.o	7341f73042b58039
+1	21673	1711008211912494319	/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-3.8/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/src/vision.o	61ea9626c55e4a14

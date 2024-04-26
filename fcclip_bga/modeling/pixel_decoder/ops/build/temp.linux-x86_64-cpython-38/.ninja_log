@@ -1,0 +1,10 @@
+# ninja log v5
+0	3414	1700577904307106364	/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-cpython-38/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/src/cpu/ms_deform_attn_cpu.o	ec902d84714c261b
+0	11169	1700577912047139796	/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-cpython-38/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/src/cuda/ms_deform_attn_cuda.o	8955dd8264b96aca
+0	16507	1700577917387162843	/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-cpython-38/work/xuwenhao/fcclip/fcclip/modeling/pixel_decoder/ops/src/vision.o	56b38e4849d52e9d
+0	19031	0	/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-cpython-38/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/src/vision.o	951873dea92491ae
+2	20113	0	/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-cpython-38/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/src/vision.o	951873dea92491ae
+1	19791	0	/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-cpython-38/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/src/vision.o	52d6e00126b31da5
+0	3477	1712550807925061838	/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-cpython-38/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/src/cpu/ms_deform_attn_cpu.o	a92342cfe681bfe1
+0	13597	1712550818037024914	/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-cpython-38/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/src/cuda/ms_deform_attn_cuda.o	dfef9018556b61fd
+1	22569	1712550827008992472	/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/build/temp.linux-x86_64-cpython-38/data/changwei/fc-clip/fcclip/modeling/pixel_decoder/ops/src/vision.o	890fba693bfb6a2e
