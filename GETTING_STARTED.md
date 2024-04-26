@@ -1,6 +1,6 @@
-## Getting Started with FC-CLIP
+## Getting Started with BGA
 
-This document provides a brief intro of the usage of FC-CLIP.
+This document provides a brief intro of the usage of BGA.
 
 Please see [Getting Started with Detectron2](https://github.com/facebookresearch/detectron2/blob/master/GETTING_STARTED.md) for full usage.
 
@@ -28,7 +28,7 @@ to understand its behavior. Some common arguments are:
 
 ### Training & Evaluation in Command Line
 
-We provide a script `train_net.py`, that is made to train all the configs provided in FC-CLIP.
+We provide a script `train_net.py`, that is made to train all the configs provided in BGA.
 
 To train a model with "train_net.py", first
 setup the corresponding datasets following
@@ -36,7 +36,7 @@ setup the corresponding datasets following
 then run:
 ```
 python train_net.py --num-gpus 8 \
-  --config-file configs/coco/panoptic-segmentation/fcclip/fcclip_convnext_large_eval_ade20k.yaml
+  --config-file configs/coco/panoptic-segmentation/bga/bga_convnext_large_eval_ade20k.yaml
 ```
 
 The configs are made for 8-GPU training.
@@ -44,14 +44,14 @@ Since we use ADAMW optimizer, it is not clear how to scale learning rate with ba
 To train on 1 GPU, you need to figure out learning rate and batch size by yourself:
 ```
 python train_net.py \
-  --config-file configs/coco/panoptic-segmentation/fcclip/fcclip_convnext_large_eval_ade20k.yaml \
+  --config-file configs/coco/panoptic-segmentation/bga/bga_convnext_large_eval_ade20k.yaml \
   --num-gpus 1 SOLVER.IMS_PER_BATCH SET_TO_SOME_REASONABLE_VALUE SOLVER.BASE_LR SET_TO_SOME_REASONABLE_VALUE
 ```
 
 To evaluate a model's performance, use
 ```
 python train_net.py \
-  --config-file configs/coco/panoptic-segmentation/fcclip/fcclip_convnext_large_eval_ade20k.yaml \
+  --config-file configs/coco/panoptic-segmentation/bga/bga_convnext_large_eval_ade20k.yaml \
   --eval-only MODEL.WEIGHTS /path/to/checkpoint_file
 ```
 For more options, see `python train_net.py -h`.

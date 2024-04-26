@@ -50,7 +50,7 @@ from detectron2.projects.deeplab import add_deeplab_config, build_lr_scheduler
 from detectron2.solver.build import maybe_add_gradient_clipping
 from detectron2.utils.logger import setup_logger
 
-from fcclip_bga import (
+from bga import (
     COCOInstanceNewBaselineDatasetMapper,
     COCOPanopticNewBaselineDatasetMapper,
     InstanceSegEvaluator,
@@ -296,7 +296,7 @@ def setup(args):
     cfg.freeze()
     default_setup(cfg, args)
     # Setup logger for "fcclip" module
-    setup_logger(output=cfg.OUTPUT_DIR, distributed_rank=comm.get_rank(), name="fcclip")
+    setup_logger(output=cfg.OUTPUT_DIR, distributed_rank=comm.get_rank(), name="bga")
     return cfg
 
 
