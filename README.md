@@ -3,7 +3,7 @@
 This repo contains the code for our paper [**Boosting Generalization via Adapter: Enhancing Robustness CLIP for Open-Vocabulary Segmentation**]
 
 <div align="center">
-  <img src="imgs/teaser.png" width="100%" height="100%"/>
+  <img src="imgs/teaser.pdf" width="100%" height="100%"/>
 </div><br/>
 
 *BGA* is an universal model for open-vocabulary image segmentation problems, consisting of a class-agnostic segmenter, in-vocabulary classifier, out-of-vocabulary classifier. With everything built upon a shared single frozen convolutional CLIP model,*BGA* not only achieves state-of-the-art performance on various open-vocabulary segmentation benchmarks, but also enjoys a much lower training (10 days with 4 A6000) and testing costs compared to prior arts.
