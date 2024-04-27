@@ -15,7 +15,7 @@ After preparing the required environment, run the following command to compile C
 `CUDA_HOME` must be defined and points to the directory of the installed CUDA toolkit.
 
 ```bash
-cd bga/modeling/pixel_decoder/ops
+cd gba/modeling/pixel_decoder/ops
 sh make.sh
 ```
 
@@ -27,8 +27,8 @@ TORCH_CUDA_ARCH_LIST='8.0' FORCE_CUDA=1 python setup.py build install
 
 ### Example conda environment setup
 ```bash
-conda create --name bga python=3.8 -y
-conda activate bga
+conda create --name gba python=3.8 -y
+conda activate gba
 conda install pytorch==1.9.0 torchvision==0.10.0 cudatoolkit=11.1 -c pytorch -c nvidia
 pip install -U opencv-python
 
@@ -37,10 +37,10 @@ git clone https://github.com/facebookresearch/detectron2.git
 python -m pip install -e detectron2
 pip install git+https://github.com/cocodataset/panopticapi.git
 pip install git+https://github.com/mcordts/cityscapesScripts.git
-git clone https://github.com/clearxu/BGA.git
-cd BGA
+git clone https://github.com/clearxu/GBA.git
+cd GBA
 pip install -r requirements.txt
-cd bga/modeling/pixel_decoder/ops
+cd gba/modeling/pixel_decoder/ops
 sh make.sh
 cd ../../../..
 ```
