@@ -143,23 +143,7 @@ class MultiHeadAttention(nn.Module):
 
         attn_weights = nn.functional.softmax(attn_weights, dim=-1)
 
-        # max_weights, _ = attn_weights.max(dim=-1)  # 取每个头对所有键的最大值
-        # max_weights_mean = max_weights.mean(dim=0)  # 求头之间的平均值，得到每个查询的平均最大权重
-        #
-        # # 确定屏蔽阈值
-        # threshold = 0.5  # 这是一个示例值，需要根据实际情况调整
-        #
-        # # 构建屏蔽矩阵
-        # mask = max_weights_mean > threshold  # 超过阈值的特征将被屏蔽
-        #
-        # # 应用屏蔽
-        # # 假设 visual_features 是形状为 [num_queries, feature_dim] 的视觉特征矩阵
-        # mask_expanded = mask.unsqueeze(-1).expand_as(attn_weights)
-        # attn_weights = attn_weights * mask_expanded.float()
-        # print(visual_features_masked.shape,value_states.shape)
-        # torch.Size([48, 65536, 255])
-        # torch.Size([48, 255, 96]
-        # exit(0)
+    
 
 
         if return_attention:
@@ -401,9 +385,6 @@ class MonaOp_st(nn.Module):
         b, c, h, w = x.shape
         # x = x.reshape(b, h, w, c).permute(0, 3, 1, 2)
         identity = x
-        # conv1_x = self.drop_area1(self.conv1(x))
-        # conv2_x = self.drop_area2(self.conv2(x))
-        # conv3_x = self.drop_area3(self.conv3(x))
 
         conv1_x = self.conv1(x)
         conv2_x = self.conv2(x)
