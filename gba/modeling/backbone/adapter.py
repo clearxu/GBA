@@ -295,8 +295,8 @@ class StyleHallucination(nn.Module):
         self.concentration = torch.tensor([concentration_coeff] * base_style_num, device='cuda')
         self._dirichlet = tdist.dirichlet.Dirichlet(concentration=self.concentration)
 
-        self.register_buffer("proto_mean", torch.zeros((base_style_num, style_dim), requires_grad=False))
-        self.register_buffer("proto_std", torch.zeros((base_style_num, style_dim), requires_grad=False))
+        self.register_buffer("proto_mean", torch.zeros((base_style_num, style_dim), requires_grad=True))
+        self.register_buffer("proto_std", torch.zeros((base_style_num, style_dim), requires_grad=True))
         self.bn = nn.BatchNorm2d(style_dim)
 
     def pcnorm(self, residual):
