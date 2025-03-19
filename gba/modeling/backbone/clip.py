@@ -29,7 +29,7 @@ import math
 
 
 
-from .adapter import ContextInteraction, MonaOp_st, MonaOp_sem
+from .adapter import  MonaOp_st, MonaOp_sem
 @BACKBONE_REGISTRY.register()
 class CLIP(Backbone):
     def __init__(self, cfg, input_shape):
