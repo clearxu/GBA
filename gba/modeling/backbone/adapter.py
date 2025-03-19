@@ -171,13 +171,11 @@ class MultiHeadAttention(nn.Module):
             raise ValueError(
                 f"`attn_output` should be of size {(bsz, self.num_heads, tgt_len, self.head_dim)}, but is {attn_output.size()}"
             )
-        # w = attn_probs.view(bsz, self.num_heads, tgt_len, self.head_dim)
-        # print(w.shape) 6 8 65536 255 -->6 65536 8 255 --> 6 65536 2040
+      
         attn_output = attn_output.view(bsz, self.num_heads, tgt_len, self.head_dim)
-        # print(attn_output.shape) torch.Size([6, 8, 65536, 96])
+      
         attn_output = attn_output.transpose(1, 2)
         attn_output = attn_output.reshape(bsz, tgt_len, self.embed_dim)
-        # print(attn_output.shape) torch.Size([6, 65536, 768])
         attn_output = self.out_proj(attn_output)
 
 
@@ -296,7 +294,7 @@ class StyleHallucination(nn.Module):
         self._dirichlet = tdist.dirichlet.Dirichlet(concentration=self.concentration)
 
         self.register_buffer("proto_mean", torch.zeros((base_style_num, style_dim), requires_grad=True))
-        self.register_buffer("proto_std", torch.zeros((base_style_num, style_dim), requires_grad=True))
+        self.register_buffer("proto_std", torch.ones((base_style_num, style_dim), requires_grad=True))
         self.bn = nn.BatchNorm2d(style_dim)
 
     def pcnorm(self, residual):
